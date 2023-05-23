@@ -3,25 +3,6 @@ from PIL import Image, ImageTk
 from bs4 import BeautifulSoup
 import requests
 
-# url = "https://pokeapi.co/api/v2/pokemon-species/"
-# count = 1
-# response = requests.get(url)
-# icerik = response.json()
-#
-# for i in icerik["results"]:
-#     url = f"https://pokeapi.co/api/v2/pokemon-species/{count}"
-#     print(f"Pokemon's name : {i['name']}")
-#     response = requests.get(url)
-#     print(f"{i['name'].capitalize()}'s growth rate : ",response.json()['growth_rate']["name"])
-#     print(f"{i['name'].capitalize()}'s habitat : ", response.json()['habitat']["name"])
-#     print(f"{i['name'].capitalize()} is baby? : ", response.json()['is_baby'])
-#     print(f"{i['name'].capitalize()} is legendary? : ", response.json()['is_legendary'])
-#     print(f"{i['name'].capitalize()} is mythical? : ", response.json()['is_mythical'])
-#     print(f"{i['name'].capitalize()}'s shape : ", response.json()['shape']["name"])
-#     print("-----------------------------------------------------------")
-#     count += 1
-
-
 def getir():
     deger = poke_entry.get()
     url = "https://pokeapi.co/api/v2/pokemon-species/"
@@ -46,8 +27,6 @@ def getir():
 
             pokemon_label.pack()
 
-
-
             print(f"{i[1]['name'].capitalize()}'s growth rate : ", response.json()['growth_rate']["name"])
             print(f"{i[1]['name'].capitalize()}'s habitat : ", response.json()['habitat']["name"])
             print(f"{i[1]['name'].capitalize()} is baby? : ", response.json()['is_baby'])
@@ -55,16 +34,6 @@ def getir():
             print(f"{i[1]['name'].capitalize()} is mythical? : ", response.json()['is_mythical'])
             print(f"{i[1]['name'].capitalize()}'s shape : ", response.json()['shape']["name"])
             print("-----------------------------------------------------------")
-
-
-
-
-
-
-
-
-
-
 
 window = tkinter.Tk()
 window.title("Pokemon")
@@ -97,17 +66,5 @@ empty_image.pack()
 
 button = tkinter.Button(text="Get",command=getir,padx=10,pady=5,font=("Arial",10,"bold"))
 button.pack()
-
-
-
-
-
-
-
-
-
-
-
-
 
 window.mainloop()
